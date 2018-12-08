@@ -139,9 +139,7 @@ public class SubstitutionCipher {
 			PrintWriter copyFile = new PrintWriter(outFile);
 			while (textScan.hasNext()) {
 				String input = textScan.nextLine();
-
 				copyFile.println(shift(input, shift));
-				// ^^^ outputting "b" to main, outputting half of code to outFile for some reason
 			}
 			copyFile.close();
 			textScan.close();
@@ -227,6 +225,7 @@ public class SubstitutionCipher {
 		String input = "";
 		String output = "";
 		int shiftAMT = 0;
+		
 		displayMenu(input, output, shiftAMT);
 		char userInput = getChoice(in, options);
 		while (!(userInput == 'Q') && (input == "" || output == "" || shiftAMT == 0)) {
